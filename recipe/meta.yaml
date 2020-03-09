@@ -1,18 +1,18 @@
 {% set name = "importhook" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.8" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 04b20acaec8330b423762d4f2a826c5e658e5093f14aad1740a9b82a433e597e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 06db03a92010036bd5f09c6cab8f37b6656e90a6cc591061ddbd3d4e775b4400
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -27,11 +27,11 @@ test:
     - importhook
 
 about:
-  home: "https://github.com/brettlangdon/importhook"
+  home: https://github.com/brettlangdon/importhook
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Execute code when certain modules are imported"
+  summary: Execute code when certain modules are imported
   doc_url: https://brettlangdon.github.io/importhook/
 
 extra:
