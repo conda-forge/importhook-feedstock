@@ -1,5 +1,5 @@
 {% set name = "importhook" %}
-{% set version = "1.0.8" %}
+{% set version = "1.0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 06db03a92010036bd5f09c6cab8f37b6656e90a6cc591061ddbd3d4e775b4400
+  sha256: 635ad367225fa022221025545c167b09d09ada671821b6e587df0d5ae4bf0aab
 
 build:
   number: 0
